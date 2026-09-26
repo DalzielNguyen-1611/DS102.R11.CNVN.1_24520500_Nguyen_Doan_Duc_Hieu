@@ -35,7 +35,7 @@
 ## 👨‍🏫 2. GIẢNG VIÊN HƯỚNG DẪN
 
 * **Giảng viên lý thuyết:** ThS. **Lưu Thanh Sơn**
-* **Giảng viên thực hành:** **Nguyễn Hiếu Nghĩa**
+* **Giảng viên thực hành:** ThS. **Nguyễn Hiếu Nghĩa**
 
 ---
 
