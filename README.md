@@ -59,4 +59,40 @@ Repository này được tạo ra nhằm:
 
 ## 📂 5. TIẾN ĐỘ & CẤU TRÚC BÀI THỰC HÀNH
 
-*(Nội dung sẽ được cập nhật)*
+| Bài tập | Nội dung / Chủ đề chính | Thư mục Lab | Các bài thực hành | Trạng thái |
+| :---: | :--- | :---: | :---: | :---: |
+| **Lab 01** | *Nội dung đang được cập nhật* | [Lab01/](./Lab01/) | `1`, `2` | ⏳ Đang cập nhật |
+| **Lab 02** | *Nội dung đang được cập nhật* | [Lab02/](./Lab02/) | `1`, `2`, ..., `n` | ⏳ Đang cập nhật |
+| **Lab 03** | *Nội dung đang được cập nhật* | [Lab03/](./Lab03/) | `1`, `2`, ..., `n` | ⏳ Đang cập nhật |
+| **Lab 04** | *Nội dung đang được cập nhật* | [Lab04/](./Lab04/) | `1`, `2`, ..., `n` | ⏳ Đang cập nhật |
+| **Lab 05** | *Nội dung đang được cập nhật* | [Lab05/](./Lab05/) | `1`, `2`, ..., `n` | ⏳ Đang cập nhật |
+
+### 🌳 Cấu trúc thư mục dự kiến
+
+Mỗi Lab gồm nhiều bài tập, mỗi bài được phân tách độc lập trong một thư mục con đánh số thứ tự từ `1` đến `n` (chứa file mã nguồn `.ipynb`, dữ liệu hoặc báo cáo tương ứng):
+
+```text
+DS102.R11.CNVN.1_24520500_Nguyen_Doan_Duc_Hieu/
+├── Lab01/                   # Bài thực hành số 1
+│   ├── 1/                   # Bài 1 (Notebook, source code, data...)
+│   ├── 2/                   # Bài 2
+│   ├── ...
+│   └── n/                   # Bài n
+├── Lab02/                   # Bài thực hành số 2
+│   ├── 1/
+│   ├── 2/
+│   └── ...
+├── Lab03/                   # Bài thực hành số 3
+│   ├── 1/
+│   ├── 2/
+│   └── ...
+├── Lab04/                   # Bài thực hành số 4
+│   ├── 1/
+│   ├── 2/
+│   └── ...
+├── Lab05/                   # Bài thực hành số 5
+│   ├── 1/
+│   ├── 2/
+│   └── ...
+└── README.md                # Tài liệu giới thiệu học phần & môn học
+```
