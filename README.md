@@ -61,7 +61,7 @@ Repository này được tạo ra nhằm:
 
 | Bài tập | Nội dung / Chủ đề chính | Thư mục Lab | Các bài thực hành | Trạng thái |
 | :---: | :--- | :---: | :---: | :---: |
-| **Lab 01** | *Nội dung đang được cập nhật* | [Lab01/](./Lab01/) | `1`, `2` | ⏳ Đang cập nhật |
+| **Lab 01** | **Thuật toán Newton-Raphson & Thu thập dữ liệu S&P 500** | [Lab01/](./Lab01/) | [`1`](./Lab01/1/) &bull; [`2`](./Lab01/2/) | ✅ Hoàn thành |
 | **Lab 02** | *Nội dung đang được cập nhật* | [Lab02/](./Lab02/) |  | ⏳ Đang cập nhật |
 | **Lab 03** | *Nội dung đang được cập nhật* | [Lab03/](./Lab03/) |  | ⏳ Đang cập nhật |
 | **Lab 04** | *Nội dung đang được cập nhật* | [Lab04/](./Lab04/) |  | ⏳ Đang cập nhật |
@@ -73,12 +73,25 @@ Mỗi bài tập thực hành được phân tách độc lập trong một thư
 
 ```text
 DS102.R11.CNVN.1_24520500_Nguyen_Doan_Duc_Hieu/
-├── Lab01/                   # Bài thực hành số 1
-│   ├── 1/                   # Bài 1
-│   └── 2/                   # Bài 2 (Crawl.ipynb)
+├── Lab01/                                  # Bài thực hành số 1
+│   ├── 1/                                  # Bài 1: Thuật toán tối ưu Newton-Raphson
+│   │   └── Newton-Raphson.ipynb
+│   └── 2/                                  # Bài 2: Thu thập và mô tả dữ liệu S&P 500
+│       ├── Crawl.ipynb                     # Script cào dữ liệu qua Selenium & API
+│       ├── Report.ipynb                    # Báo cáo mô tả thuộc tính dataset S&P 500
+│       ├── sp500_yahoo.csv                 # Dữ liệu định dạng CSV
+│       ├── sp500_yahoo.tsv                 # Dữ liệu định dạng TSV
+│       └── sp500_yahoo.json                # Dữ liệu định dạng JSON
 ├── Lab02/                   # Bài thực hành số 2
 ├── Lab03/                   # Bài thực hành số 3
 ├── Lab04/                   # Bài thực hành số 4
 ├── Lab05/                   # Bài thực hành số 5
 └── README.md                # Tài liệu giới thiệu học phần & môn học
 ```
+
+### 📝 Chi tiết nội dung thực hiện Lab 01:
+* **Bài 1 — [Lab01/1/](./Lab01/1/):** Cài đặt và thực nghiệm thuật toán tối ưu hóa không ràng buộc **Newton-Raphson** (`Newton-Raphson.ipynb`) trên các hàm số đa biến.
+* **Bài 2 — [Lab01/2/](./Lab01/2/):**
+  * Thu thập dữ liệu lịch sử hàng ngày của chỉ số chứng khoán **S&P 500 (`^GSPC`)** từ Yahoo Finance (`Crawl.ipynb`) giai đoạn từ 30/12/1927 đến nay (24,803 phiên giao dịch).
+  * Xuất và lưu trữ đồng thời ở 3 định dạng: CSV, TSV và JSON.
+  * Báo cáo mô tả cấu trúc, ý nghĩa các thuộc tính và kiểm tra tính toàn vẹn của bộ dữ liệu (`Report.ipynb`).
