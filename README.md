@@ -63,7 +63,7 @@ Repository này được tạo ra nhằm:
 | :---: | :--- | :---: | :---: | :---: |
 | **Lab 01** | **Thuật toán Newton-Raphson & Thu thập dữ liệu S&P 500** | [Lab01/](./Lab01/) | [`1`](./Lab01/1/) &bull; [`2`](./Lab01/2/) | ✅ Hoàn thành |
 | **Lab 02** | **Hồi quy Logistic, Hồi quy Softmax & Thư viện Scikit-Learn** | [Lab02/](./Lab02/) | [`1`](./Lab02/1/) &bull; [`2`](./Lab02/2/) &bull; [`3`](./Lab02/3/) | ✅ Hoàn thành |
-| **Lab 03** | *Nội dung đang được cập nhật* | [Lab03/](./Lab03/) |  | ⏳ Đang cập nhật |
+| **Lab 03** | **Hồi quy Tuyến tính (Linear Regression) & Đa cộng tuyến** | [Lab03/](./Lab03/) | [`1`](./Lab03/1/) &bull; [`2`](./Lab03/2/) &bull; [`3`](./Lab03/3/) &bull; [`4`](./Lab03/4/) | ✅ Hoàn thành |
 | **Lab 04** | *Nội dung đang được cập nhật* | [Lab04/](./Lab04/) |  | ⏳ Đang cập nhật |
 | **Lab 05** | *Nội dung đang được cập nhật* | [Lab05/](./Lab05/) |  | ⏳ Đang cập nhật |
 
@@ -91,7 +91,17 @@ DS102.R11.CNVN.1_24520500_Nguyen_Doan_Duc_Hieu/
 │   │   └── MachineLearninglibrary.ipynb
 │   ├── assignments.ipynb                   # Đề bài gốc Lab 02
 │   └── preliminaries.ipynb                 # Lý thuyết gốc Lab 02
-├── Lab03/                                  # Bài thực hành số 3
+├── Lab03/                                  # Bài thực hành số 3: Linear Regression
+│   ├── 1/                                  # Bài 1: Hồi quy Tuyến tính thuần NumPy (OLS)
+│   │   └── LinearRegression.ipynb
+│   ├── 2/                                  # Bài 2: Chuẩn hóa dữ liệu (Standardization) & So sánh
+│   │   └── Standardization.ipynb
+│   ├── 3/                                  # Bài 3: Xử lý loại bỏ đa cộng tuyến (Collinearity Removal)
+│   │   └── CollinearRemoval.ipynb
+│   ├── 4/                                  # Bài 4: So sánh với thư viện Scikit-Learn
+│   │   └── MachineLearningLibrary.ipynb
+│   ├── assignments.ipynb                   # Đề bài gốc Lab 03
+│   └── preliminaries.ipynb                 # Lý thuyết gốc Lab 03
 ├── Lab04/                                  # Bài thực hành số 4
 ├── Lab05/                                  # Bài thực hành số 5
 └── README.md                               # Tài liệu giới thiệu học phần & môn học
@@ -109,3 +119,10 @@ DS102.R11.CNVN.1_24520500_Nguyen_Doan_Duc_Hieu/
 * **Bài 1 — [Lab02/1/](./Lab02/1/):** Cài đặt từ đầu (from scratch) mô hình **Hồi quy Logistic (Logistic Regression)** thuần thư viện `NumPy` và thuật toán tối ưu **Gradient Descent** cho bài toán phân loại nhị phân (dự đoán xu hướng ngày mai TĂNG hay GIẢM). Đánh giá Precision, Recall, F1-Score và trực quan hóa đường cong hàm mất mát Binary Cross-Entropy.
 * **Bài 2 — [Lab02/2/](./Lab02/2/):** Cài đặt từ đầu mô hình **Hồi quy Softmax (Softmax Regression)** thuần `NumPy` và Gradient Descent cho bài toán phân loại đa lớp (3 trạng thái thị trường: Giảm mạnh, Đi ngang, Tăng mạnh). Đánh giá Macro Precision, Recall, F1-Score và trực quan hóa đường cong hàm mất mát Categorical Cross-Entropy.
 * **Bài 3 — [Lab02/3/](./Lab02/3/):** Sử dụng thư viện chuẩn **Scikit-Learn** (`sklearn.linear_model.LogisticRegression`) để huấn luyện và đánh giá cả hai bài toán phân loại nhị phân và phân loại 3 lớp; trực quan hóa và phân tích chuyên sâu thông qua ma trận nhầm lẫn (Confusion Matrix).
+
+### 📝 Chi tiết nội dung thực hiện Lab 03:
+* **Bộ dữ liệu thực nghiệm:** Sử dụng tập dữ liệu **S&P 500** (`Lab01/2/sp500_yahoo.csv`) từ Lab 1 để giải quyết bài toán hồi quy dự đoán giá đóng cửa phiên tiếp theo `Next_Close` (Bonus +1 điểm).
+* **Bài 1 — [Lab03/1/](./Lab03/1/):** Cài đặt từ đầu mô hình **Hồi quy Tuyến tính (Linear Regression)** chỉ dùng `NumPy` theo công thức nghiệm giải tích OLS $\hat{\beta} = (X^T X)^{-1} X^T y$. Đánh giá MSE, RMSE, MAE, $R^2$ và trực quan hóa Actual vs Predicted và biểu đồ phần dư (Residuals).
+* **Bài 2 — [Lab03/2/](./Lab03/2/):** Tự xây dựng thuật toán chuẩn hóa Z-score (`StandardScalerNumpy`) đưa các đặc trưng về phân phối chuẩn $(\mu=0, \sigma=1)$ và so sánh hiệu năng, trọng số của mô hình trên dữ liệu gốc vs dữ liệu đã chuẩn hóa.
+* **Bài 3 — [Lab03/3/](./Lab03/3/):** Phân tích ma trận tương quan Pearson để phát hiện và loại bỏ các cột có tính đa cộng tuyến mạnh ($|r| > 0.98$); so sánh sai số và đánh giá tính ổn định số học của mô hình.
+* **Bài 4 — [Lab03/4/](./Lab03/4/):** Triển khai mô hình Hồi quy Tuyến tính bằng thư viện chuẩn **Scikit-Learn** (`LinearRegression`) và đối chiếu với mô hình tự cài đặt bằng NumPy (sai lệch hệ số $\approx 10^{-11}$).
